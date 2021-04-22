@@ -5,6 +5,7 @@ tags:
 ---
 
 # 概述
+
 Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。 
 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
@@ -36,8 +37,8 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
 | git push origin --tags | 推送所有tag |
 | git push origin v1.0 | 推送某个tag |
 
-
 # IDEA常用的git操作
+
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idea-git.png)
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idet-git2.png)
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idat-git3.png)
@@ -46,22 +47,22 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
 **版本回退**
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/QQ%E6%88%AA%E5%9B%BE20190823162426.png)
 
-
-
 # Git 工作流简介
+
 ## 概述
+
 工作流有各式各样的用法，但也正因此使得在实际工作中如何上手使用增加了难度。这篇指南通过总览公司团队中最常用的几种 Git 工作流让大家可以上手使用。
 
 在阅读的过程中请记住，本文中的几种工作流是作为方案指导而不是条例规定。在展示了各种工作流可能的用法后，你可以从不同的工作流中挑选或揉合出一个满足你自己需求的工作流
 
 ## 集中式工作流
+
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/git-workflow-svn.png)
 转到分布式版本控制系统看起来像个令人生畏的任务，但不改变已用的工作流你也可以用上 Git 带来的收益。团队可以用和 Subversion 完全不变的方式来开发项目。
 
 但使用 Git 加强开发的工作流，Git 比 SVN 有几个优势。首先，每个开发可以有属于自己的整个工程的本地拷贝。隔离的环境让各个开发者的工作和项目的其他部分（修改）独立开来 —— 即自由地提交到自己的本地仓库，先完全忽略上游的开发，直到方便的时候再把修改反馈上去。
 
 其次，Git 提供了强壮的分支和合并模型。不像 SVN，Git 的分支设计成可以做为一种用来在仓库之间集成代码和分享修改的『失败安全』的机制。
-
 
 **工作方式**
 像 Subversion 一样，集中式工作流以中央仓库作为项目所有修改的单点实体。相比 SVN 缺省的开发分支 trunk，Git 叫做 master，所有修改提交到这个分支上。该工作流只用到 master 这一个分支。
@@ -81,6 +82,7 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
 如果本地修改和上游提交有冲突，Git 会暂停 rebase 过程，给你手动解决冲突的机会。Git 解决合并冲突，用和生成提交一样的 git status 和 git add 命令，很一致方便。还有一点，如果解决冲突时遇到麻烦，Git 可以很简单中止整个 rebase 操作，重来一次（或者让别人来帮助解决）。
 
 ## GitFlow 工作流
+
 **概述**
 ![](https://www.funtl.com/assets/git-workflows-gitflow.png)
 GitFlow 工作流定义了一个围绕项目发布的严格分支模型。虽然比功能分支工作流复杂几分，但提供了用于一个健壮的用于管理大型项目的框架。
@@ -92,19 +94,20 @@ GitFlow 工作流定义了一个围绕项目发布的严格分支模型。虽然
 GitFlow 工作流没有用超出功能分支工作流的概念和命令，而是为不同的分支分配一个很明确的角色，并定义分支之间如何和什么时候进行交互。除了使用功能分支，在做准备、维护和记录发布也使用各自的分支。当然你可以用上功能分支工作流所有的好处：Pull Requests、隔离实验性开发和更高效的协作。
 
 #### 工作方式
+
 GitFlow 工作流仍然用中央仓库作为所有开发者的交互中心。和其它的工作流一样，开发者在本地工作并 push 分支到中央仓库中。
 
 #### 历史分支
+
 相对使用仅有的一个 master 分支，GitFlow 工作流使用2个分支来记录项目的历史。master 分支存储了正式发布的历史，而 develop 分支作为功能的集成分支。这样也方便 master 分支上的所有提交分配一个版本号。
 ![](https://www.funtl.com/assets/git-workflow-release-cycle-1historical.png)
-
 
 剩下要说明的问题围绕着这2个分支的区别展开。
 
 #### 功能分支
+
 每个新功能位于一个自己的分支，这样可以 push 到中央仓库以备份和协作。但功能分支不是从 master 分支上拉出新分支，而是使用 develop 分支作为父分支。当新功能完成时，合并回 develop 分支。新功能提交应该从不直接与 master 分支交互。
 ![](https://www.funtl.com/assets/git-workflow-release-cycle-2feature.png)
-
 
 注意，从各种含义和目的上来看，功能分支加上 develop 分支就是功能分支工作流的用法。但 GitFlow 工作流没有在这里止步。
 
@@ -121,6 +124,7 @@ GitFlow 工作流仍然用中央仓库作为所有开发者的交互中心。和
 用于新建发布分支的分支: develop
 用于合并的分支: master
 分支命名: release-* 或 release/*
+
 #### 维护分支
 
 ![](https://www.funtl.com/assets/git-workflow-release-cycle-4maintenance.png)
