@@ -45,3 +45,13 @@ services:
 - 使用docker exec -it 容器id /bin/bansh 进入容器/var/jenkins_home目录下确认是否存在文件
 - 将JAVA_HOME和MAVEN_HOME配置为容器地址
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/jenkins_5.png)
+
+### 插件推荐
+
+- Maven Integration plugin
+![](https://414706657.oss-cn-shenzhen.aliyuncs.com/jenkins_6.png)
+
+- Git Parameter Plug-In
+```text
+可以在构建的时候选择git的某一个分支来构建服务，其中jenkins的老版本中用的Dynamic Choice Parameter这个插件，但是新版本这个插件已经被Git Parameter Plug-In它代替了
+```
