@@ -144,10 +144,10 @@ about:
 #   title:
 
 # Links widget. Empty links will hide widget.
-links:
-  - title: 菜鸟教程
-    url: https://www.runoob.com
-  - title: W3Cschool
-    url: https://www.w3cschool.cn/tutorial
-  - title: 李卫民-博客
-    url: https://www.funtl.com
+# links:
+#   - title: 菜鸟教程
+#     url: https://www.runoob.com
+#   - title: W3Cschool
+#     url: https://www.w3cschool.cn/tutorial
+#   - title: 李卫民-博客
+#     url: https://www.funtl.com
