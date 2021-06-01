@@ -82,4 +82,4 @@ WriteNullBooleanAsFalse–Boolean字段如果为null,输出为false,而非null
 
 
 - @JsonProperty和@JSONField的区别
-!()[https://www.codetd.com/article/11887797]
+**@JsonProperty** 和 **@JSONField**注解都是为了解决obj转json字符串的时候，将java bean的属性名替换成目标属性名。常见于调用第三方接口的时候属性名不一致的场景,两个注解的作用是相同的，只是来源不同，使用方式不同。
