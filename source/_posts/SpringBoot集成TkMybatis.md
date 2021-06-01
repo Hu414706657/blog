@@ -225,4 +225,4 @@ public class TbUser {
 
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/tkmybatis.png)
 
-tkMybatis帮我实现一些基本查询方便我快速开发
+tkMybatis帮我实现一些基本查询方便我们快速开发
