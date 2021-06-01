@@ -36,6 +36,8 @@ tags:
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idea/IDEA_2.png)
 ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idea/IDEA_3.png)
 
+---------
+
 # 使用技巧
 
 ## IDEA常用快捷键：
@@ -88,7 +90,7 @@ tags:
  ![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idea/IDIA_11.png)
  
 
-``` text
+```text
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
 #parse("File Header.java")
 /**
