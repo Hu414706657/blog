@@ -102,3 +102,17 @@ tags:
 public class ${NAME} {
 }
  ```
+
+
+## IDEA设置默认打开文件的大小
+dea提示文件大小超过2.56超过配置，代码检测功能不可用
+![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idea/IDEA_12.png)
+
+解决办法:
+1.在顶部导航栏中找到Help中的 **Edit Custom Properties...** 如果提示文件不存在则创建文件
+![](https://414706657.oss-cn-shenzhen.aliyuncs.com/idea/IDEA_11.png)
+
+```text
+# 这里我设置的是200MB
+idea.max.intellisense.filesize=204800 
+```
