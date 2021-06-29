@@ -28,7 +28,7 @@ docker start ifx
 docker exec -it 容器ID /bin/bash
 ```
 
-- 输入 <code>dbaccess</code>进入选择窗口
+- 输入<code>dbaccess</code>进入选择窗口
 - Database -> Create -> 输入数据库名
 ps:回车后选择Log选择Log文件(数据库默认选择None，会导致创建失败)，exit->Create-new-database
 
