@@ -1,5 +1,5 @@
 ---
-title: informix数据库简单实践
+title: informix数据库部署
 date: 2021-06-29 11:46:07
 tags:
 ---
